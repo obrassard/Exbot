@@ -4,7 +4,7 @@
 [![Hex.pm](https://img.shields.io/badge/Include%20Robot%20actions%20for-Windows-blue.svg)]()
 <!--[![Hex.pm](https://img.shields.io/badge/Include%20Robot%20actions%20for-Linux-orange.svg)]()-->
 
-#### This class give extra functionality to Java Robot API.<br>It allow you to perform many Robot actions, while writing less code.
+#### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allow you to perform many Robot actions, while writing less code.
 
 
 ## Table of Contents
