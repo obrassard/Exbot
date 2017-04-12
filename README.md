@@ -6,8 +6,9 @@
 
 
 #### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allow you to perform many robot actions, while writing less code.
-
-
+```java
+public class Exbot extends Robot{ }
+```
 ## Table of Contents
 [Getting started](#getting-started)<br>
 [Method Summary](#method-summary)<br>
