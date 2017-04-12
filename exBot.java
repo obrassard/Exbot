@@ -53,9 +53,9 @@ public class exBot extends Robot{
     /**
      * Write text with the bot on Windows
      * Compatible with all characters
-     * @param ptext Text to write
+     * @param text Text to write
      */
-    public void windowsWriteText(String ptext){
+    public void windowsWriteText(String text){
 
         StringSelection selection = new StringSelection(ptext);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -70,9 +70,9 @@ public class exBot extends Robot{
     /**
      * Write text with the bot on macOS
      * Compatible with all characters
-     * @param ptext Text to write
+     * @param text Text to write
      */
-    public void macWriteText(String ptext){
+    public void macWriteText(String text){
 
         StringSelection selection = new StringSelection(ptext);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -86,10 +86,10 @@ public class exBot extends Robot{
 
     /**
      * Type text as a keyboard input.
-     * Nor compatible with special characters
-     * @param pText Text to write (A-Z letter, space, numbers or dot)
+     * Not compatible with special characters
+     * @param text Text to write (A-Z letter, space, numbers or dot)
      */
-    public void typeText(String pText) {
+    public void typeText(String text) {
 
         String text = pText.toUpperCase();
 
@@ -107,7 +107,7 @@ public class exBot extends Robot{
      * @param x x coordinate
      * @param y y coordinate
      */
-    public void mouseMoveAndClick(int x, int y){
+    public void mouseClickAt(int x, int y){
         this.mouseMove(x,y);
         this.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         this.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
@@ -184,5 +184,3 @@ public class exBot extends Robot{
 
 
 }
-
-
