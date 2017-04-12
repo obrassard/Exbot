@@ -155,10 +155,10 @@ public class exBot extends Robot{
     //--- Encryption static methods ------------------
     /**
      * Encode a string using BASE64
-     * @param pTextToEncode string to incode
+     * @param textToEncode string to incode
      * @return an encoded string
      */
-    public static String encode(String pTextToEncode)
+    public static String encode(String textToEncode)
     {
 
         String encoded = DatatypeConverter.printBase64Binary(pTextToEncode.getBytes());
@@ -168,10 +168,10 @@ public class exBot extends Robot{
 
     /**
      * Decode a BASE64 string
-     * @param pTextToDecode BASE64 string to decode
+     * @param textToDecode BASE64 string to decode
      * @return The decoded string
      */
-    public static String decode(String pTextToDecode)
+    public static String decode(String textToDecode)
     {
         String decoded = new String(DatatypeConverter.parseBase64Binary(pTextToDecode));
         return decoded;

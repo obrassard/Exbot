@@ -10,9 +10,9 @@
 ## Table of Contents
 [Getting started](#getting-started)<br>
 [Method Summary](#method-summary)<br>
-[OS Specific methods](#)<br>
+[About OS Specific methods](#)<br>
 [Method Detail](#method-detail)<br>
-[Static Encryption Methods](#)
+[Encryption Methods](#)
 
 [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)
 
@@ -42,13 +42,21 @@ Exbot class include several method based on Robot API.
 
 | Method and Description  | Modifier and Type | Operating system
 | ------------- | ------------- | ---------------- |
+| [Robot](#getting-started)()<br>_Constructs a Exbot object in the coordinate system of the primary screen._| - | All |
 | [mouseClickAt](#)(int x, int y)<br>_Perform a click at the specified coordinates_  | void | All |
 | [mouseDragAndDrop](#)(int srcX, int srcY, int destX, int destY)<br>_Drag and drop form a source coordinate to a destination coordinate_ | void  | All |
-| [pressEnter](#)()<br>_ Press the ENTER key _  | void | All |
-| [typeText](#)(String text)<br>_Write text as direct keyboard input (A-Z letter, space, numbers or dot only) _  | void | All |
-| [macWriteText](#)(String text)<br>_ Paste a specified string from the clipboard (on mac) _  | void | macOS |
-| [windowsWriteText](#)(String text)<br>_ Paste a specified string from the clipboard (on Windows) _  | void | Windows |
-| [macCmdShortcut](#)(int keycode)<br>_ Perform a keyboard shortcut with the cmd key and a specified key _  | void | macOS |
+| [pressEnter](#)()<br>_Press the ENTER key_  | void | All |
+| [typeText](#)(String text)<br>_Write text as direct keyboard input (A-Z letter, space, numbers or dot only)_  | void | All |
+| [macWriteText](#)(String text)<br>_Paste a specified string from the clipboard (on mac)_  | void | macOS |
+| [windowsWriteText](#)(String text)<br>_Paste a specified string from the clipboard (on Windows)_  | void | Windows |
+| [macCmdShortcut](#)(int keycode)<br>_Perform a keyboard shortcut with the cmd key and a specified key_  | void | macOS |
+| [windowsWriteText](#)(int keycode)<br>_Perform a keyboard shortcut with the ctrl key and a specified key_  | void | Windows |
+| [macShowSpotlight](#)(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | macOS |
+| [windowsShowStart](#)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | Windows |
+| [encode](#)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
+| [decode](#)(Decode a BASE64 string)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
+
+#### __About OS Specific Methods__
 
 
 ## Method Detail
