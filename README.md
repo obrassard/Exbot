@@ -1,20 +1,20 @@
 # Exbot : An extension of Java Robot API <br>
 ![](https://img.shields.io/badge/language-Java%208-red.svg)
-![](https://img.shields.io/badge/Include%20Robot%20actions%20for-macOS-lightgrey.svg)
+![](https://img.shields.io/badge/Include%20Robot%20actions%20for-macOS-blue.svg)
 ![](https://img.shields.io/badge/Include%20Robot%20actions%20for-Windows-blue.svg)
 
 
 
 #### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allow you to perform many robot actions, while writing less code.
 ```java
-public class Exbot extends Robot{ }
+public class Exbot extends Robot{}
 ```
 ## Table of Contents
 [Getting started](#getting-started)<br>
 [Method Summary](#method-summary)<br>
-[About OS Specific methods](#)<br>
+[About OS Specific methods](#about-os-specific-methods)<br>
 [Method Detail](#method-detail)<br>
-[Encryption Methods](#)
+[Encryption Methods](#encryption-methods)
 
 [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)
 
@@ -63,7 +63,18 @@ Several actions have macOS and Windows equivalent methods because they are relie
 
 Concerned methods are those starting whit *mac* or *windows*, for instance : `macWriteText()` or `windowsWriteText()`. Other methods can be use with all operating system.
 
+## Method details
+### MouseClickAt
+```java
+public void mouseClickAt(int x, int y)
+```
+*Perform a click at the specified coordinates with the mouse.*
+#### Parameters
+*Coordinates (x, y) where to click :*<br>
+**x** - x position<br>
+**y** - y position
+***
 
-## Method Detail
+## Encryption Methods
 
-## Other details are coming very soon...
+### Other details are coming very soon...
