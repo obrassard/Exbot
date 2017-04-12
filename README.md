@@ -8,7 +8,7 @@
 [Getting started](#getting-started)<br>
 [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)
 
-##Getting Started
+## Getting Started
 Get start by creating a ` new ` Exbot instance with a 
 
 ```java
@@ -16,7 +16,7 @@ Exbot bot = new Exbot();
 ```
 
 Remember that Java Robot class must handle `AWTException`. 
-For that, you need to `try/catch` exceptions or throw` the exception:
+For that, you need to `try/catch` exceptions or `throw` the exception:
 ```java
 public static void main(String[] args) {
 
