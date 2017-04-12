@@ -1,6 +1,6 @@
 # Exbot : An extension of Java Robot API <br>
 ![](https://img.shields.io/badge/language-Java%208-red.svg)
-![](https://img.shields.io/badge/Include%20Robot%20actions%20for-macOS-orange.svg)
+![](https://img.shields.io/badge/Include%20Robot%20actions%20for-macOS-lightgrey.svg)
 ![](https://img.shields.io/badge/Include%20Robot%20actions%20for-Windows-blue.svg)
 
 
