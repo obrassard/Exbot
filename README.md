@@ -3,8 +3,6 @@
 ![](https://img.shields.io/badge/Include%20Robot%20actions%20for-macOS-blue.svg)
 ![](https://img.shields.io/badge/Include%20Robot%20actions%20for-Windows-blue.svg)
 
-
-
 #### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allow you to perform many robot actions, while writing less code.
 ```java
 public class Exbot extends Robot{}
@@ -25,7 +23,7 @@ Get start by creating a ` new ` Exbot instance with a
 Exbot bot = new Exbot();
 ```
 
-Remember that Java Robot class must handle `AWTException`.
+:book: Remember that Java Robot class must handle `AWTException`.
 For that, you need to `try/catch` exceptions or `throw` the exception:
 ```java
 public static void main(String[] args) {
@@ -48,7 +46,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [mouseClickAt](#)(int x, int y)<br>_Perform a click at the specified coordinates_  | void | All |
 | [mouseDragAndDrop](#)(int srcX, int srcY, int destX, int destY)<br>_Drag and drop form a source coordinate to a destination coordinate_ | void  | All |
 | [pressEnter](#)()<br>_Press the ENTER key_  | void | All |
-| [typeText](#)(String text)<br>_Write text as direct keyboard input (A-Z letter, space, numbers or dot only)_  | void | All |
+| [typeText](#)(String text)<br>_Write text as direct keyboard input (A-Z letters, space, numbers or dot only)_  | void | All |
 | [macWriteText](#)(String text)<br>_Paste a specified string from the clipboard (on mac)_  | void | [macOS](#about-os-specific-methods) |
 | [windowsWriteText](#)(String text)<br>_Paste a specified string from the clipboard (on Windows)_  | void | [Windows](#about-os-specific-methods) |
 | [macCmdShortcut](#)(int keycode)<br>_Perform a keyboard shortcut with the cmd key and a specified key_  | void | [macOS](#about-os-specific-methods) |
@@ -56,7 +54,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [macShowSpotlight](#)(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-specific-methods) |
 | [windowsShowStart](#)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-specific-methods) |
 | [encode](#)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
-| [decode](#)(Decode a BASE64 string)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
+| [decode](#)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
 ##### About OS Specific Methods
 Several actions have macOS and Windows equivalent methods because they are relied on keyboard shortcuts that differ depending of the operating system.
@@ -69,12 +67,109 @@ Concerned methods are those starting whit *mac* or *windows*, for instance : `ma
 public void mouseClickAt(int x, int y)
 ```
 *Perform a click at the specified coordinates with the mouse.*
-#### Parameters
+#### Parameters:
 *Coordinates (x, y) where to click :*<br>
-**x** - x position<br>
-**y** - y position
+**x** - X position<br>
+**y** - Y position
+***
+### mouseDragAndDrop
+```java
+public void mouseDragAndDrop(int srcX, int srcY, int destX, int destY)
+```
+*Perform a drag and drop movement from a source coordinate to a destination coordinate with the mouse.*
+#### Parameters:
+**srcX** - X source position<br>
+**srcY** - Y source position<br>
+**destX** - X destination position<br>
+**destY** - Y destination position
+
+
+*Press the mouse right-button at source coordinates, move to destination index and release the button*
+***
+### pressEnter
+```java
+public void pressEnter()
+```
+*Perform a keyPress/keyRelease on the ENTER key.*
+***
+### typeText
+```java
+public void typeText(String text)
+```
+*Write text as direct keyboard input.*
+#### Parameters:
+**text** - Text to write
+*(Work with A-Z letters, space, numbers and dot)*
+***
+### macWriteText &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+```java
+public void macWriteText(String text)
+```
+*Paste a specified string from the clipboard. (Perform a cmd + v of the string).*<br>
+#### Parameters:
+**text** - Text to write (to paste)
+***
+### macCmdShortcut &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+```java
+public void macCmdShortcut(int keycode)
+```
+*Perform a keyboard shortcut with the cmd key and a specified key.*
+#### Parameters:
+**keycode** - Key to press<br>
+
+ :book: *We recommend you to* `import java.awt.event.KeyEvent`, *to get an enumeration of the possible keycode (e.g. KeyEvent.VK_A)*
+***
+### macShowSpotlight &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+```java
+public void macShowSpotlight()
+```
+*Do a "cmd + space" to show the Spotlight search box on macOS.*
+***
+### windowsWriteText &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
+```java
+public void windowsShowStart()
+```
+*Paste a specified string from the clipboard. (Perform a ctrl + v of the string).*<br>
+#### Parameters:
+**text** - Text to write (to paste)
+***
+### windowsCtrlShortcut &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
+```java
+public void windowsCtrlShortcut(int keycode)
+```
+*Perform a keyboard shortcut with the ctrl key and a specified key.*
+#### Parameters:
+**keycode** - Key to press<br>
+
+ :book: *We recommend you to* `import java.awt.event.KeyEvent`, *to get an enumeration of the possible keycode (e.g. KeyEvent.VK_A)*
+***
+### windowsShowStart &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
+```java
+windowsShowStart(String text)
+```
+*Perform a keyPress/keyRelease on the Windows key to show the start menu.*
 ***
 
 ## Encryption Methods
+### encode
+```java
+public static String encode(String textToEncode)
+```
+*Encode a string using BASE64.*
+#### Parameters:
+**textToEncode** - string to encode<br>
+#### Return:
+The BASE64 encoded string.
+***
 
-### Other details are coming very soon...
+### decode
+```java
+public static String decode(String textToEncode)
+```
+*Decode a BASE64 string.*
+#### Parameters:
+**textToDecode** - string to decode
+#### Return:
+The decoded string.
+
+### More details coming soon...
