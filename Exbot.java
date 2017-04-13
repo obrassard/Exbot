@@ -22,6 +22,12 @@ public class Exbot extends Robot{
     }
 
     /**
+     * Verify if the OS is macOS.
+     */
+    private boolean isMacOs = (System.getProperty("os.name").toLowerCase()).startsWith("mac");
+
+
+    /**
      * Do a "cmd + space" to show the Spotlight search box on macOS
      */
     public void macShowSpotlight(){
@@ -50,39 +56,33 @@ public class Exbot extends Robot{
         this.delay(500);
     }
 
+
     /**
-     * Write text with the bot on Windows
+     * Write text with the bot by pasting a given string from the clipboard
      * Compatible with all characters
      * @param text Text to write
      */
-    public void windowsWriteText(String text){
+    public void WriteText(String text){
 
         StringSelection selection = new StringSelection(text);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(selection, selection);
 
-        this.keyPress(KeyEvent.VK_CONTROL);
-        this.keyPress(KeyEvent.VK_V);
-        this.keyRelease(KeyEvent.VK_V);
-        this.keyRelease(KeyEvent.VK_CONTROL);
+        if (isMacOs){
+            this.keyPress(KeyEvent.VK_META);
+            this.keyPress(KeyEvent.VK_V);
+            this.keyRelease(KeyEvent.VK_V);
+            this.keyRelease(KeyEvent.VK_META);
+        }
+        else{
+            this.keyPress(KeyEvent.VK_CONTROL);
+            this.keyPress(KeyEvent.VK_V);
+            this.keyRelease(KeyEvent.VK_V);
+            this.keyRelease(KeyEvent.VK_CONTROL);
+        }
+
     }
 
-    /**
-     * Write text with the bot on macOS
-     * Compatible with all characters
-     * @param text Text to write
-     */
-    public void macWriteText(String text){
-
-        StringSelection selection = new StringSelection(text);
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(selection, selection);
-
-        this.keyPress(KeyEvent.VK_META);
-        this.keyPress(KeyEvent.VK_V);
-        this.keyRelease(KeyEvent.VK_V);
-        this.keyRelease(KeyEvent.VK_META);
-    }
 
     /**
      * Type text as a keyboard input.
@@ -112,6 +112,16 @@ public class Exbot extends Robot{
         this.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         this.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
+    /**
+     * Move the mouse to specific coordinates of the screen and perform a right click
+     * @param x x coordinate
+     * @param y y coordinate
+     */
+    public void mouseRightClickAt(int x, int y){
+        this.mouseMove(x,y);
+        this.mousePress(InputEvent.BUTTON3_DOWN_MASK);
+        this.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+    }
 
     /**
      * Perform a drag and drop from a source coordinate to a destination coordinate
@@ -128,27 +138,26 @@ public class Exbot extends Robot{
     }
 
     /**
-     * Perform a keyboard shortcut with the cmd key and a specified key
-     * @param keycode Shortcut key (bot will do "cmd + key")
+     * Perform a keyboard shortcut with the cmd or ctrl key (depending of the os) and another specified key
+     * @param keycode Shortcut key
      */
-    public void macCmdShortcut(int keycode){
-        this.keyPress(KeyEvent.VK_META);
-        this.keyPress(keycode);
-        this.keyRelease(keycode);
-        this.keyRelease(KeyEvent.VK_META);
-        this.delay(500);
-    }
+    public void shortcut(int keycode){
+        if (isMacOs)
+        {
+            this.keyPress(KeyEvent.VK_META);
+            this.keyPress(keycode);
+            this.keyRelease(keycode);
+            this.keyRelease(KeyEvent.VK_META);
+            this.delay(500);
+        }
+        else{
+            this.keyPress(KeyEvent.VK_CONTROL);
+            this.keyPress(keycode);
+            this.keyRelease(keycode);
+            this.keyRelease(KeyEvent.VK_CONTROL);
+            this.delay(500);
+        }
 
-    /**
-     * Perform a keyboard shortcut with the ctrl key and a specified key
-     * @param keycode Shortcut key (bot will do "ctrl + key")
-     */
-    public void windowsCtrlShortcut(int keycode){
-        this.keyPress(KeyEvent.VK_CONTROL);
-        this.keyPress(keycode);
-        this.keyRelease(keycode);
-        this.keyRelease(KeyEvent.VK_CONTROL);
-        this.delay(500);
     }
 
 
@@ -161,8 +170,7 @@ public class Exbot extends Robot{
     public static String encode(String textToEncode)
     {
 
-        String encoded = DatatypeConverter.printBase64Binary(textToEncode.getBytes());
-        return encoded;
+        return DatatypeConverter.printBase64Binary(textToEncode.getBytes());
     }
 
 
@@ -173,7 +181,7 @@ public class Exbot extends Robot{
      */
     public static String decode(String textToDecode)
     {
-        String decoded = new String(DatatypeConverter.parseBase64Binary(textToDecode));
-        return decoded;
+        return (new String(DatatypeConverter.parseBase64Binary(textToDecode)));
+
     }
 }

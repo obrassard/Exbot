@@ -45,13 +45,14 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | ------------- | ------------- | ---------------- |
 | [Robot](#getting-started)()<br>_Constructs an **Exbot** object in the coordinate system of the primary screen._| - | All |
 | [mouseClickAt](#mouseclickat)(int x, int y)<br>_Perform a click at the specified coordinates_  | void | All |
+| [mouseRightClickAt](#mouserightclickat)(int x, int y)<br>_Perform a right click at the specified coordinates_  | void | All |
 | [mouseDragAndDrop](#mousedraganddrop)(int srcX, int srcY, int destX, int destY)<br>_Drag and drop form a source coordinate to a destination coordinate_ | void  | All |
 | [pressEnter](#pressenter)()<br>_Press the ENTER key_  | void | All |
 | [typeText](#typetext)(String text)<br>_Write text as direct keyboard input (A-Z letters, space, numbers or dot only)_  | void | All |
 | [writeText](#writetext)(String text)<br>_Write text with the bot by pasting a given string from the clipboard_  | void | All |
 | [shortcut](#shortcut)(int keycode)<br>_with the cmd or ctrl key (depending of the os) and another specified key_  | void | All |
 | [macShowSpotlight](#macshowspotlight)(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-exclusive-methods) |
-| [windowsShowStart](#windowsshowstart)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-exclusive-methodss) |
+| [windowsShowStart](#windowsshowstart)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-exclusive-methods) |
 | [encode](#encode)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
 | [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
@@ -62,6 +63,16 @@ Exbot class include several action methods based on Java Robot. It allows you to
 ## mouseClickAt
 ```java
 public void mouseClickAt(int x, int y)
+```
+*Perform a click at the specified coordinates with the mouse.*
+### Parameters:
+*Coordinates (x, y) where to click :*<br>
+**x** - X position<br>
+**y** - Y position
+***
+## mouseRightClickAt
+```java
+public void mouseRightClickAt(int x, int y)
 ```
 *Perform a click at the specified coordinates with the mouse.*
 ### Parameters:
@@ -154,4 +165,3 @@ The decoded string.
 
 # Project Ideas
 Visit [this page](https://github.com/obrassard/Exbot/wiki) to find examples of projects and workflows created with **Exbot**
-
