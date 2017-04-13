@@ -62,7 +62,7 @@ public class Exbot extends Robot{
      * Compatible with all characters
      * @param text Text to write
      */
-    public void WriteText(String text){
+    public void writeText(String text){
 
         StringSelection selection = new StringSelection(text);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
