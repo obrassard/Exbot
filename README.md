@@ -58,9 +58,9 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
 #### About OS specific methods
-Several actions have macOS and Windows equivalent methods because they are relied on keyboard shortcuts that differ depending of the operating system.
+The methods starting whit *mac* or *windows*, for instance `macShowSpotlight()`, are exclusive to their operating system. You should only use them on the appropriate OS.
 
-Concerned methods are those starting whit *mac* or *windows*, for instance : `macWriteText()` or `windowsWriteText()`. Other methods can be use with all operating system.
+Other methods can be use with all operating system.
 
 # Method detail
 ## MouseClickAt
