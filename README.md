@@ -12,7 +12,8 @@ public class Exbot extends Robot
 [Method Summary](#method-summary)<br>
 [About OS Specific methods](#about-os-specific-methods)<br>
 [Method Detail](#method-detail)<br>
-[Encryption Methods](#encryption-methods)
+[Encryption Methods](#encryption-methods)<br>
+[Project Ideas](#project-ideas)
 
 [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)
 
@@ -173,3 +174,7 @@ public static String decode(String textToEncode)
 The decoded string.
 ***
 ### New methods coming soon...
+
+## Project Ideas
+Visit [this page](#) to find example projects and workflow created with **Exbot**
+
