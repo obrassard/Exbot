@@ -10,7 +10,7 @@ public class Exbot extends Robot
 ## Table of Contents
 [Getting started](#getting-started)<br>
 [Method Summary](#method-summary)<br>
-[About OS Specific methods](#about-os-specific-methods)<br>
+[About OS specific methods](#about-os-specific-methods)<br>
 [Method Detail](#method-detail)<br>
 [Encryption Methods](#encryption-methods)<br>
 [Project Ideas](#project-ideas)
@@ -57,7 +57,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [encode](#encode)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
 | [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
-##### About OS Specific Methods
+##### About OS specific methods
 Several actions have macOS and Windows equivalent methods because they are relied on keyboard shortcuts that differ depending of the operating system.
 
 Concerned methods are those starting whit *mac* or *windows*, for instance : `macWriteText()` or `windowsWriteText()`. Other methods can be use with all operating system.
