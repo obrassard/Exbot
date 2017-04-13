@@ -127,7 +127,8 @@ public void closeCurrentWindows()
 ```
 *Close the current windows*<br>
 *(Equivalent of `closeCurrentWindows(false)`)*
-
+<br>
+<br>
 ```java
 public void closeCurrentWindows(boolean quit)
 ```
@@ -168,7 +169,8 @@ public void messageSender(int x, int y, String text)
 **x** - X Position of the text box<br>
 **y** - Y Position of the text box<br>
 **text** - Text to send
-
+<br>
+<br>
 ```java
 public void messageSender(int x, int y, String text, int frequency)
 ```
@@ -178,7 +180,8 @@ public void messageSender(int x, int y, String text, int frequency)
 **y** - Y Position of the text box<br>
 **text** - Text to send<br>
 **frequency** - Number of repetitions
-
+<br>
+<br>
 ```java
 public void messageSender(int x, int y, String text, int frequency, int interval)
 ```
