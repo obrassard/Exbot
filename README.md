@@ -176,5 +176,5 @@ The decoded string.
 ##### New methods coming soon...
 
 # Project Ideas
-Visit [this page](#) to find example projects and workflow created with **Exbot**
+Visit [this page](#https://github.com/obrassard/Exbot/wiki) to find examples of projects and workflows created with **Exbot**
 
