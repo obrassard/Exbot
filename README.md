@@ -148,7 +148,6 @@ public void windowsCtrlShortcut(int keycode)
 windowsShowStart(String text)
 ```
 *Perform a keyPress/keyRelease on the Windows key to show the start menu.*
-***
 
 # Encryption Methods
 ## encode
