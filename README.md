@@ -51,7 +51,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [windowsWriteText](#windowswritetext)(String text)<br>_Paste a specified string from the clipboard (on Windows)_  | void | [Windows](#about-os-specific-methods) |
 | [macCmdShortcut](#maccmdshortcut)(int keycode)<br>_Perform a keyboard shortcut with the cmd key and a specified key_  | void | [macOS](#about-os-specific-methods) |
 | [windowsCtrlShortcut](#windowsctrlshortcut)(int keycode)<br>_Perform a keyboard shortcut with the ctrl key and a specified key_  | void | [Windows](#about-os-specific-methods) |
-| [macShowSpotlight](#macshowspotlight)macshowspotlight(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-specific-methods) |
+| [macShowSpotlight](#macshowspotlight)(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-specific-methods) |
 | [windowsShowStart](#windowsshowstart)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-specific-methods) |
 | [encode](#encode)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
 | [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
