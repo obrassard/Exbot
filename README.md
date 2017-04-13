@@ -59,7 +59,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 :warning: Methods starting with *mac* or *windows*, for instance `macShowSpotlight()`, are exclusive to their operating system. You should only use them on the appropriate OS. Of course, other methods can be use on all systems.
 
 # Method detail
-## MouseClickAt
+## mouseClickAt
 ```java
 public void mouseClickAt(int x, int y)
 ```
