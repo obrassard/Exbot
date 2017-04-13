@@ -48,19 +48,15 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [mouseDragAndDrop](#mousedraganddrop)(int srcX, int srcY, int destX, int destY)<br>_Drag and drop form a source coordinate to a destination coordinate_ | void  | All |
 | [pressEnter](#pressenter)()<br>_Press the ENTER key_  | void | All |
 | [typeText](#typetext)(String text)<br>_Write text as direct keyboard input (A-Z letters, space, numbers or dot only)_  | void | All |
-| [macWriteText](#macwritetext)(String text)<br>_Paste a specified string from the clipboard (on mac)_  | void | [macOS](#about-os-specific-methods) |
-| [windowsWriteText](#windowswritetext)(String text)<br>_Paste a specified string from the clipboard (on Windows)_  | void | [Windows](#about-os-specific-methods) |
-| [macCmdShortcut](#maccmdshortcut)(int keycode)<br>_Perform a keyboard shortcut with the cmd key and a specified key_  | void | [macOS](#about-os-specific-methods) |
-| [windowsCtrlShortcut](#windowsctrlshortcut)(int keycode)<br>_Perform a keyboard shortcut with the ctrl key and a specified key_  | void | [Windows](#about-os-specific-methods) |
+| [writeText](#writetext)(String text)<br>_Write text with the bot by pasting a given string from the clipboard_  | void | All |
+| [shortcut](#shortcut)(int keycode)<br>_with the cmd or ctrl key (depending of the os) and another specified key_  | void | All |
 | [macShowSpotlight](#macshowspotlight)(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-specific-methods) |
 | [windowsShowStart](#windowsshowstart)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-specific-methods) |
 | [encode](#encode)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
 | [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
 #### About OS exclusive methods
-:warning: The methods starting whit *mac* or *windows*, for instance `macShowSpotlight()`, are exclusive to their operating system. You should only use them on the appropriate OS.
-
-Other methods can be use with on all systems.
+:warning: Methods starting with *mac* or *windows*, for instance `macShowSpotlight()`, are exclusive to their operating system. You should only use them on the appropriate OS. Of course, other methods can be use on all systems.
 
 # Method detail
 ## MouseClickAt
@@ -101,49 +97,32 @@ public void typeText(String text)
 **text** - Text to write
 *(Work with A-Z letters, space, numbers and dot)*
 ***
-## <a id="macwritetext"></a>macWriteText &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+## <a id="writetext"></a>writeText
 ```java
-public void macWriteText(String text)
+public void writeText(String text)
 ```
-*Paste a specified string from the clipboard. (Perform a cmd + v of the string).*<br>
+*Write text with the bot by pasting a given string from the clipboard.*<br>
 ### Parameters:
 **text** - Text to write (to paste)
 ***
-## <a id="maccmdshortcut"></a>macCmdShortcut &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+## <a id="shortcut"></a>shortcut
 ```java
-public void macCmdShortcut(int keycode)
+public void shortcut(int keycode)
 ```
-*Perform a keyboard shortcut with the cmd key and a specified key.*
+*Perform a keyboard shortcut with the cmd or ctrl key (depending of the os) and another specified key*
 ### Parameters:
-**keycode** - Key to press<br>
+**keycode** - Second key to press<br>
 
 :book: *We recommend you to* `import java.awt.event.KeyEvent`, *to enumerate the possible keycodes (e.g. KeyEvent.VK_A)*
 ***
-## <a id="macshowspotlight"></a>macShowSpotlight &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+## <a id="macshowspotlight"></a>macShowSpotlight &nbsp; ![](https://img.shields.io/badge/Exclusive_to-macOS-blue.svg)
 ```java
 public void macShowSpotlight()
 ```
 *Do a "cmd + space" to show the Spotlight search box on macOS.*
 ***
-## <a id="windowswritetext"></a>windowsWriteText &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
-```java
-public void windowsShowStart()
-```
-*Paste a specified string from the clipboard. (Perform a ctrl + v of the string).*<br>
-### Parameters:
-**text** - Text to write (to paste)
-***
-## <a id="windowsctrlshortcut"></a>windowsCtrlShortcut &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
-```java
-public void windowsCtrlShortcut(int keycode)
-```
-*Perform a keyboard shortcut with the ctrl key and a specified key.*
-### Parameters:
-**keycode** - Key to press<br>
 
-:book: *We recommend you to* `import java.awt.event.KeyEvent`, *to enumerate the possible keycodes (e.g. KeyEvent.VK_A)*
-***
-## <a id="windowsshowstart"></a>windowsShowStart &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
+## <a id="windowsshowstart"></a>windowsShowStart &nbsp; ![](https://img.shields.io/badge/Exclusive_to-Windows-blue.svg)
 ```java
 windowsShowStart(String text)
 ```
