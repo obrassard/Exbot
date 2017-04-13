@@ -175,6 +175,6 @@ The decoded string.
 ***
 ### New methods coming soon...
 
-## Project Ideas
+# Project Ideas
 Visit [this page](#) to find example projects and workflow created with **Exbot**
 
