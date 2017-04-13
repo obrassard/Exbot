@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/Include%20Robot%20actions%20for-macOS-blue.svg)
 ![](https://img.shields.io/badge/Include%20Robot%20actions%20for-Windows-blue.svg)
 
-#### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allow you to perform many robot actions, while writing less code.
+#### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allow you to perform many robot actions, while writing less code. &nbsp;:robot:
 ```java
 public class Exbot extends Robot
 ```
