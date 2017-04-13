@@ -50,6 +50,8 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [pressEnter](#pressenter)()<br>_Press the ENTER key_  | void | All |
 | [typeText](#typetext)(String text)<br>_Write text as direct keyboard input (A-Z letters, space, numbers or dot only)_  | void | All |
 | [writeText](#writetext)(String text)<br>_Write text with the bot by pasting a given string from the clipboard_  | void | All |
+| [closeCurrentWindows](#closecurrentwindows)()<br>_Close the current windows_ | void | All |
+| [closeCurrentWindows](#closecurrentwindows)(boolean quit)<br>_Close the current windows or quit the current app (on macOS)_ | void | All |
 | [shortcut](#shortcut)(int keycode)<br>_with the cmd or ctrl key (depending of the os) and another specified key_  | void | All |
 | [macShowSpotlight](#macshowspotlight)(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-exclusive-methods) |
 | [windowsShowStart](#windowsshowstart)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-exclusive-methods) |
@@ -115,6 +117,21 @@ public void writeText(String text)
 *Write text with the bot by pasting a given string from the clipboard.*<br>
 ### Parameters:
 **text** - Text to write (to paste)
+***
+## <a id="closecurrentwindows"></a>closeCurrentWindows
+```java
+public void closeCurrentWindows()
+```
+*Close the current windows*<br>
+*(Equivalent of `closeCurrentWindows(false)`)*
+
+```java
+public void closeCurrentWindows(boolean quit)
+```
+*Close the current windows or quit an app*<br>
+### Parameters:
+**quit** - `true` completely quit the current app (on macOS only)
+
 ***
 ## <a id="shortcut"></a>shortcut
 ```java

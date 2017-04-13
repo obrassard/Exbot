@@ -56,7 +56,6 @@ public class Exbot extends Robot{
         this.delay(500);
     }
 
-
     /**
      * Write text with the bot by pasting a given string from the clipboard
      * Compatible with all characters
@@ -74,15 +73,14 @@ public class Exbot extends Robot{
             this.keyRelease(KeyEvent.VK_V);
             this.keyRelease(KeyEvent.VK_META);
         }
-        else{
+        else
+        {
             this.keyPress(KeyEvent.VK_CONTROL);
             this.keyPress(KeyEvent.VK_V);
             this.keyRelease(KeyEvent.VK_V);
             this.keyRelease(KeyEvent.VK_CONTROL);
         }
-
     }
-
 
     /**
      * Type text as a keyboard input.
@@ -101,7 +99,6 @@ public class Exbot extends Robot{
         }
     }
 
-
     /**
      * Move the mouse to specific coordinates of the screen and perform a click
      * @param x x coordinate
@@ -112,6 +109,7 @@ public class Exbot extends Robot{
         this.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         this.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
+
     /**
      * Move the mouse to specific coordinates of the screen and perform a right click
      * @param x x coordinate
@@ -150,16 +148,45 @@ public class Exbot extends Robot{
             this.keyRelease(KeyEvent.VK_META);
             this.delay(500);
         }
-        else{
+        else
+        {
             this.keyPress(KeyEvent.VK_CONTROL);
             this.keyPress(keycode);
             this.keyRelease(keycode);
             this.keyRelease(KeyEvent.VK_CONTROL);
             this.delay(500);
         }
-
     }
 
+    /**
+     * Close the current windows.
+     * @param quit "true" completely quit the app (on macOS)
+     */
+    public void closeCurrentWindows(boolean quit)
+    {
+        if(isMacOs) {
+
+            if(quit)
+                shortcut(KeyEvent.VK_Q);
+            else
+                shortcut(KeyEvent.VK_W);
+        }
+        else
+        {
+            this.keyPress(KeyEvent.VK_ALT);
+            this.keyPress(KeyEvent.VK_F4);
+            this.keyRelease(KeyEvent.VK_F4);
+            this.keyRelease(KeyEvent.VK_ALT);
+        }
+    }
+
+    /**
+     * Close the current windows.
+     */
+    public void closeCurrentWindows()
+    {
+        closeCurrentWindows(false);
+    }
 
     //--- Encryption static methods ------------------
     /**
@@ -169,10 +196,8 @@ public class Exbot extends Robot{
      */
     public static String encode(String textToEncode)
     {
-
         return DatatypeConverter.printBase64Binary(textToEncode.getBytes());
     }
-
 
     /**
      * Decode a BASE64 string
@@ -182,6 +207,5 @@ public class Exbot extends Robot{
     public static String decode(String textToDecode)
     {
         return (new String(DatatypeConverter.parseBase64Binary(textToDecode)));
-
     }
 }
