@@ -55,6 +55,9 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [shortcut](#shortcut)(int keycode)<br>_with the cmd or ctrl key (depending of the os) and another specified key_  | void | All |
 | [macShowSpotlight](#macshowspotlight)(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-exclusive-methods) |
 | [windowsShowStart](#windowsshowstart)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-exclusive-methods) |
+| [messageSender](#messagesender)(int x, int y, String text)<br>*Write string in a text box and "send" it one times (by pressing enter)* | void | All |
+| [messageSender](#messagesender)(int x, int y, String text, int frequency)<br>*Write string in a text box and "send" it several times (by pressing enter)* | void | All |
+| [messageSender](#messagesender)(int x, int y, String text, int frequency, int interval)<br>*Write string in a text box and "send" it several times (by pressing enter), at a given interval.* | void | All |
 | [encode](#encode)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
 | [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
@@ -152,9 +155,40 @@ public void macShowSpotlight()
 
 ## <a id="windowsshowstart"></a>windowsShowStart &nbsp; ![](https://img.shields.io/badge/Exclusive_to-Windows-blue.svg)
 ```java
-windowsShowStart(String text)
+public void windowsShowStart(String text)
 ```
 *Perform a keyPress/keyRelease on the Windows key to show the start menu.*
+***
+## <a id="messagesender"></a>messageSender
+```java
+public void messageSender(int x, int y, String text)
+```
+*Write text in a text box and "send" it one time (by pressing enter).*<br>
+### Parameters:
+**x** - X Position of the text box<br>
+**y** - Y Position of the text box<br>
+**text** - Text to send
+
+```java
+public void messageSender(int x, int y, String text, int frequency)
+```
+*Write text in a text box and "send" it several times (by pressing enter).*<br>
+### Parameters:
+**x** - X Position of the text box<br>
+**y** - Y Position of the text box<br>
+**text** - Text to send<br>
+**frequency** - Number of repetitions
+
+```java
+public void messageSender(int x, int y, String text, int frequency, int interval)
+```
+*Write string in a text box and "send" it several times (by pressing enter), at a given interval.*<br>
+### Parameters:
+**x** - X Position of the text box<br>
+**y** - Y Position of the text box<br>
+**text** - Text to send<br>
+**frequency** - Number of repetitions<br>
+**interval** - Delay between each sending (in ms)
 
 # Encryption Methods
 ## encode
@@ -178,7 +212,6 @@ public static String decode(String textToEncode)
 ### Return:
 The decoded string.
 ***
-##### New methods coming soon...
 
 # Project Ideas
 Visit [this page](https://github.com/obrassard/Exbot/wiki) to find examples of projects and workflows created with **Exbot**

@@ -48,7 +48,7 @@ public class Exbot extends Robot{
     }
 
     /**
-     * Single key press on the Enter button
+     * Single key press on the Enter button.
      */
     public void pressEnter(){
         this.keyPress(KeyEvent.VK_ENTER);
@@ -57,8 +57,8 @@ public class Exbot extends Robot{
     }
 
     /**
-     * Write text with the bot by pasting a given string from the clipboard
-     * Compatible with all characters
+     * Write text with the bot by pasting a given string from the clipboard.
+     * Compatible with all characters.
      * @param text Text to write
      */
     public void writeText(String text){
@@ -101,8 +101,8 @@ public class Exbot extends Robot{
 
     /**
      * Move the mouse to specific coordinates of the screen and perform a click
-     * @param x x coordinate
-     * @param y y coordinate
+     * @param x X Coordinate
+     * @param y Y Coordinate
      */
     public void mouseClickAt(int x, int y){
         this.mouseMove(x,y);
@@ -112,8 +112,8 @@ public class Exbot extends Robot{
 
     /**
      * Move the mouse to specific coordinates of the screen and perform a right click
-     * @param x x coordinate
-     * @param y y coordinate
+     * @param x X Coordinate
+     * @param y Y Coordinate
      */
     public void mouseRightClickAt(int x, int y){
         this.mouseMove(x,y);
@@ -123,10 +123,10 @@ public class Exbot extends Robot{
 
     /**
      * Perform a drag and drop from a source coordinate to a destination coordinate
-     * @param srcX X source position (where to start the drag and drop)
-     * @param srcY Y source position (where to start the drag and drop)
-     * @param destX X destination position (where to end the drag and drop)
-     * @param destY Y destination position (where to end the drag and drop)
+     * @param srcX X Source position (where to start the drag and drop)
+     * @param srcY Y Source position (where to start the drag and drop)
+     * @param destX X Destination position (where to end the drag and drop)
+     * @param destY Y Destination position (where to end the drag and drop)
      */
     public void mouseDragAndDrop(int srcX, int srcY, int destX, int destY){
         this.mouseMove(srcX,srcY);
@@ -160,6 +160,14 @@ public class Exbot extends Robot{
 
     /**
      * Close the current windows.
+     */
+    public void closeCurrentWindows()
+    {
+        closeCurrentWindows(false);
+    }
+
+    /**
+     * Close the current windows.
      * @param quit "true" completely quit the app (on macOS)
      */
     public void closeCurrentWindows(boolean quit)
@@ -181,18 +189,52 @@ public class Exbot extends Robot{
     }
 
     /**
-     * Close the current windows.
+     * Write text in a text box and "send" it one time (by pressing enter).
+     * @param x X Position of the text box
+     * @param y Y Position of the text box
+     * @param text Text to send
      */
-    public void closeCurrentWindows()
+    public void messageSender(int x, int y, String text)
     {
-        closeCurrentWindows(false);
+        messageSender(x, y, text, 1, 1);
+    }
+
+    /**
+     * Write text in a text box and "send" it several times (by pressing enter).
+     * @param x X Position of the text box
+     * @param y Y Position of the text box
+     * @param text Text to send
+     * @param frequency Number of repetitions
+     */
+    public void messageSender(int x, int y, String text, int frequency)
+    {
+        messageSender(x, y, text, frequency, 25);
+    }
+
+    /**
+     * Write string in a text box and "send" it several times (by pressing enter), at a given interval.
+     * @param x X Position of the text box
+     * @param y Y Position of the text box
+     * @param text Text to send
+     * @param frequency Number of repetitions
+     * @param interval Delay between each sending (in ms)
+     */
+    public void messageSender(int x, int y, String text, int frequency, int interval)
+    {
+        mouseClickAt(x,y); //text field coordinates
+
+        for (int i=0; i < frequency; i++){
+            writeText(text);
+            pressEnter();
+            this.delay(interval);
+        }
     }
 
     //--- Encryption static methods ------------------
     /**
      * Encode a string using BASE64
-     * @param textToEncode string to incode
-     * @return an encoded string
+     * @param textToEncode String to incode
+     * @return An encoded string
      */
     public static String encode(String textToEncode)
     {
