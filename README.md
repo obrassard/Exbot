@@ -173,7 +173,7 @@ public static String decode(String textToEncode)
 ### Return:
 The decoded string.
 ***
-### New methods coming soon...
+##### New methods coming soon...
 
 # Project Ideas
 Visit [this page](#) to find example projects and workflow created with **Exbot**
