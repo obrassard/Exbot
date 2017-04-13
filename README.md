@@ -43,18 +43,18 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | Method and Description  | Modifier and Type | Operating system
 | ------------- | ------------- | ---------------- |
 | [Robot](#getting-started)()<br>_Constructs an **Exbot** object in the coordinate system of the primary screen._| - | All |
-| [mouseClickAt](#)(int x, int y)<br>_Perform a click at the specified coordinates_  | void | All |
-| [mouseDragAndDrop](#)(int srcX, int srcY, int destX, int destY)<br>_Drag and drop form a source coordinate to a destination coordinate_ | void  | All |
-| [pressEnter](#)()<br>_Press the ENTER key_  | void | All |
-| [typeText](#)(String text)<br>_Write text as direct keyboard input (A-Z letters, space, numbers or dot only)_  | void | All |
-| [macWriteText](#)(String text)<br>_Paste a specified string from the clipboard (on mac)_  | void | [macOS](#about-os-specific-methods) |
-| [windowsWriteText](#)(String text)<br>_Paste a specified string from the clipboard (on Windows)_  | void | [Windows](#about-os-specific-methods) |
-| [macCmdShortcut](#)(int keycode)<br>_Perform a keyboard shortcut with the cmd key and a specified key_  | void | [macOS](#about-os-specific-methods) |
-| [windowsCtrlShortcut](#)(int keycode)<br>_Perform a keyboard shortcut with the ctrl key and a specified key_  | void | [Windows](#about-os-specific-methods) |
-| [macShowSpotlight](#)(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-specific-methods) |
-| [windowsShowStart](#)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-specific-methods) |
-| [encode](#)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
-| [decode](#)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
+| [mouseClickAt](#mouseclickat)(int x, int y)<br>_Perform a click at the specified coordinates_  | void | All |
+| [mouseDragAndDrop](#mousedraganddrop)(int srcX, int srcY, int destX, int destY)<br>_Drag and drop form a source coordinate to a destination coordinate_ | void  | All |
+| [pressEnter](#pressenter)()<br>_Press the ENTER key_  | void | All |
+| [typeText](#typetext)(String text)<br>_Write text as direct keyboard input (A-Z letters, space, numbers or dot only)_  | void | All |
+| [macWriteText](#macwritetext)(String text)<br>_Paste a specified string from the clipboard (on mac)_  | void | [macOS](#about-os-specific-methods) |
+| [windowsWriteText](#windowswritetext)(String text)<br>_Paste a specified string from the clipboard (on Windows)_  | void | [Windows](#about-os-specific-methods) |
+| [macCmdShortcut](#maccmdshortcut)(int keycode)<br>_Perform a keyboard shortcut with the cmd key and a specified key_  | void | [macOS](#about-os-specific-methods) |
+| [windowsCtrlShortcut](#windowsctrlshortcut)(int keycode)<br>_Perform a keyboard shortcut with the ctrl key and a specified key_  | void | [Windows](#about-os-specific-methods) |
+| [macShowSpotlight](#)macshowspotlight(String text)<br>_Do a "cmd + space" to show the Spotlight search box on mac_  | void | [macOS](#about-os-specific-methods) |
+| [windowsShowStart](#windowsshowstart)(String text)<br>_Press on the "windows" key to show the start menu on Windows_  | void | [Windows](#about-os-specific-methods) |
+| [encode](#encode)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
+| [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
 ##### About OS Specific Methods
 Several actions have macOS and Windows equivalent methods because they are relied on keyboard shortcuts that differ depending of the operating system.
@@ -84,7 +84,7 @@ public void mouseDragAndDrop(int srcX, int srcY, int destX, int destY)
 **destY** - Y destination position
 
 
-*Press the mouse right-button at source coordinates, move to destination index and release the button*
+🤖 *Explanation : The robot will press the mouse right-button at source coordinates, move the cursor to destination index and release the button*
 ***
 ### pressEnter
 ```java
@@ -101,7 +101,7 @@ public void typeText(String text)
 **text** - Text to write
 *(Work with A-Z letters, space, numbers and dot)*
 ***
-### macWriteText &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+### <a id="macwritetext"></a>macWriteText &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
 ```java
 public void macWriteText(String text)
 ```
@@ -109,7 +109,7 @@ public void macWriteText(String text)
 #### Parameters:
 **text** - Text to write (to paste)
 ***
-### macCmdShortcut &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+### <a id="maccmdshortcut"></a>macCmdShortcut &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
 ```java
 public void macCmdShortcut(int keycode)
 ```
@@ -117,15 +117,15 @@ public void macCmdShortcut(int keycode)
 #### Parameters:
 **keycode** - Key to press<br>
 
- :book: *We recommend you to* `import java.awt.event.KeyEvent`, *to get an enumeration of the possible keycode (e.g. KeyEvent.VK_A)*
+:book: *We recommend you to* `import java.awt.event.KeyEvent`, *to enumerate the possible keycodes (e.g. KeyEvent.VK_A)*
 ***
-### macShowSpotlight &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
+### <a id="macshowspotlight"></a>macShowSpotlight &nbsp; ![](https://img.shields.io/badge/Specific_for-macOS-blue.svg)
 ```java
 public void macShowSpotlight()
 ```
 *Do a "cmd + space" to show the Spotlight search box on macOS.*
 ***
-### windowsWriteText &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
+### <a id="windowswritetext"></a>windowsWriteText &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
 ```java
 public void windowsShowStart()
 ```
@@ -133,7 +133,7 @@ public void windowsShowStart()
 #### Parameters:
 **text** - Text to write (to paste)
 ***
-### windowsCtrlShortcut &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
+### <a id="windowsctrlshortcut"></a>windowsCtrlShortcut &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
 ```java
 public void windowsCtrlShortcut(int keycode)
 ```
@@ -141,9 +141,9 @@ public void windowsCtrlShortcut(int keycode)
 #### Parameters:
 **keycode** - Key to press<br>
 
- :book: *We recommend you to* `import java.awt.event.KeyEvent`, *to get an enumeration of the possible keycode (e.g. KeyEvent.VK_A)*
+:book: *We recommend you to* `import java.awt.event.KeyEvent`, *to enumerate the possible keycodes (e.g. KeyEvent.VK_A)*
 ***
-### windowsShowStart &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
+### <a id="windowsshowstart"></a>windowsShowStart &nbsp; ![](https://img.shields.io/badge/Specific_for-Windows-blue.svg)
 ```java
 windowsShowStart(String text)
 ```
