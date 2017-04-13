@@ -11,13 +11,13 @@ import javax.xml.bind.DatatypeConverter;
  * ExtendedBot.
  * This class give extra functionality to Java Robot class
  */
-public class exBot extends Robot{
+public class Exbot extends Robot{
 
     /**
-     * Create a new instance of exBot inheriting form Robot api
+     * Create a new instance of Exbot inheriting form Robot api
      * @throws AWTException
      */
-    public exBot() throws AWTException{
+    public Exbot() throws AWTException{
         super();
     }
 
@@ -57,7 +57,7 @@ public class exBot extends Robot{
      */
     public void windowsWriteText(String text){
 
-        StringSelection selection = new StringSelection(ptext);
+        StringSelection selection = new StringSelection(text);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(selection, selection);
 
@@ -74,7 +74,7 @@ public class exBot extends Robot{
      */
     public void macWriteText(String text){
 
-        StringSelection selection = new StringSelection(ptext);
+        StringSelection selection = new StringSelection(text);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(selection, selection);
 
@@ -87,14 +87,14 @@ public class exBot extends Robot{
     /**
      * Type text as a keyboard input.
      * Not compatible with special characters
-     * @param text Text to write (A-Z letter, space, numbers or dot)
+     * @param text Text to write (A-Z letters, space, numbers or dot)
      */
     public void typeText(String text) {
 
-        String text = pText.toUpperCase();
+        String textToType = text.toUpperCase();
 
-        for (int i = 0; i < text.length(); i++) {
-            char character = text.charAt(i);
+        for (int i = 0; i < textToType.length(); i++) {
+            char character = textToType.charAt(i);
             this.keyPress(character);
             this.keyRelease(character);
             this.delay(15);
@@ -115,10 +115,10 @@ public class exBot extends Robot{
 
     /**
      * Perform a drag and drop from a source coordinate to a destination coordinate
-     * @param srcX X coordinate where to start the drag and drop
-     * @param srcY Y coordinate where to start the drag and drop
-     * @param destX X coordinate where to end the drag and drop
-     * @param destY Y coordinate where to end the drag and drop
+     * @param srcX X source position (where to start the drag and drop)
+     * @param srcY Y source position (where to start the drag and drop)
+     * @param destX X destination position (where to end the drag and drop)
+     * @param destY Y destination position (where to end the drag and drop)
      */
     public void mouseDragAndDrop(int srcX, int srcY, int destX, int destY){
         this.mouseMove(srcX,srcY);
@@ -128,7 +128,7 @@ public class exBot extends Robot{
     }
 
     /**
-     * Perform a keyboard shortcut with the cmd key and an other key
+     * Perform a keyboard shortcut with the cmd key and a specified key
      * @param keycode Shortcut key (bot will do "cmd + key")
      */
     public void macCmdShortcut(int keycode){
@@ -140,7 +140,7 @@ public class exBot extends Robot{
     }
 
     /**
-     * Perform a keyboard shortcut with the ctrl key and an other key
+     * Perform a keyboard shortcut with the ctrl key and a specified key
      * @param keycode Shortcut key (bot will do "ctrl + key")
      */
     public void windowsCtrlShortcut(int keycode){
@@ -161,7 +161,7 @@ public class exBot extends Robot{
     public static String encode(String textToEncode)
     {
 
-        String encoded = DatatypeConverter.printBase64Binary(pTextToEncode.getBytes());
+        String encoded = DatatypeConverter.printBase64Binary(textToEncode.getBytes());
         return encoded;
     }
 
@@ -173,14 +173,7 @@ public class exBot extends Robot{
      */
     public static String decode(String textToDecode)
     {
-        String decoded = new String(DatatypeConverter.parseBase64Binary(pTextToDecode));
+        String decoded = new String(DatatypeConverter.parseBase64Binary(textToDecode));
         return decoded;
     }
-
-
-
-
-
-
-
 }
