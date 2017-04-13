@@ -8,7 +8,7 @@
 public class Exbot extends Robot
 ```
 ## Table of Contents
-[Getting started](#getting-started)<br>
+[Getting Started](#getting-started)<br>
 [Method Summary](#method-summary)<br>
 [Method Detail](#method-detail)<br>
 [Encryption Methods](#encryption-methods)<br>
