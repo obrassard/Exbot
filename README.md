@@ -3,16 +3,16 @@
 ![](https://img.shields.io/badge/Include%20Robot%20actions%20for-macOS-blue.svg)
 ![](https://img.shields.io/badge/Include%20Robot%20actions%20for-Windows-blue.svg)
 
-#### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allow you to perform many robot actions, while writing less code. &nbsp;:robot:
+#### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allows you to perform many robot actions, while writing less code. &nbsp;:robot:
 ```java
 public class Exbot extends Robot
 ```
 ## Table of Contents
 [Getting started](#getting-started)<br>
 [Method Summary](#method-summary)<br>
-[About OS specific methods](#about-os-specific-methods)<br>
 [Method Detail](#method-detail)<br>
 [Encryption Methods](#encryption-methods)<br>
+[About OS specific methods](#about-os-specific-methods)<br>
 [Project Ideas](#project-ideas)
 
 [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)
@@ -57,7 +57,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [encode](#encode)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
 | [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
-##### About OS specific methods
+#### About OS specific methods
 Several actions have macOS and Windows equivalent methods because they are relied on keyboard shortcuts that differ depending of the operating system.
 
 Concerned methods are those starting whit *mac* or *windows*, for instance : `macWriteText()` or `windowsWriteText()`. Other methods can be use with all operating system.
