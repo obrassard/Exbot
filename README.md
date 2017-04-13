@@ -74,7 +74,7 @@ public void mouseClickAt(int x, int y)
 ```java
 public void mouseRightClickAt(int x, int y)
 ```
-*Perform a click at the specified coordinates with the mouse.*
+*Perform a right click at the specified coordinates with the mouse.*
 ### Parameters:
 *Coordinates (x, y) where to click :*<br>
 **x** - X position<br>
