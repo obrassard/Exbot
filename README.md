@@ -12,7 +12,7 @@ public class Exbot extends Robot
 [Method Summary](#method-summary)<br>
 [Method Detail](#method-detail)<br>
 [Encryption Methods](#encryption-methods)<br>
-[About OS specific methods](#about-os-specific-methods)<br>
+[About OS exclusive methods](#about-os-exclusive-methods)<br>
 [Project Ideas](#project-ideas)
 
 [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)
@@ -57,10 +57,10 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [encode](#encode)(String textToEncode)<br>_Encode a string using BASE64_  | static&nbsp;String | All |
 | [decode](#decode)(String textToDecode)<br>_Decode a BASE64 string_  | static&nbsp;String | All |
 
-#### About OS specific methods
-The methods starting whit *mac* or *windows*, for instance `macShowSpotlight()`, are exclusive to their operating system. You should only use them on the appropriate OS.
+#### About OS exclusive methods
+:warning: The methods starting whit *mac* or *windows*, for instance `macShowSpotlight()`, are exclusive to their operating system. You should only use them on the appropriate OS.
 
-Other methods can be use with all operating system.
+Other methods can be use with on all systems.
 
 # Method detail
 ## MouseClickAt
