@@ -1,7 +1,9 @@
 # Exbot : An extension of Java Robot API <br>
-![](https://img.shields.io/badge/language-Java%208-red.svg)
-![](https://img.shields.io/badge/Include%20Robot%20actions%20for-macOS-blue.svg)
-![](https://img.shields.io/badge/Include%20Robot%20actions%20for-Windows-blue.svg)
+![requirement](https://img.shields.io/badge/Require-Java%207%20or%20later-red.svg)
+![version](https://img.shields.io/badge/Version-1.0.1-brightgreen.svg)
+![Tested on macos and Windows](https://img.shields.io/badge/Tested%20on-macOS%20&%20Windows-blue.svg)
+
+
 
 #### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allows you to perform many robot actions, while writing less code. &nbsp;:robot:
 ```java
@@ -243,9 +245,9 @@ Visit [this page](https://github.com/obrassard/Exbot/wiki) to find examples of p
                                              ///         \\\
                                            _///___     ___\\\_
                                           |_______|   |_______|
-                                              
-                                           ___      __   __  ___ 
+
+                                           ___      __   __  ___
                                           |__  \_/ |__) /  \  |  
                                           |___ / \ |__) \__/  |  
-                       
-                         
+
+                        
