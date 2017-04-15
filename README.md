@@ -109,7 +109,7 @@ public void mouseDragAndDrop(int srcX, int srcY, int destX, int destY)
 **destX** - X destination position<br>
 **destY** - Y destination position
 
-:robot: *Explanation : The robot will press the mouse right-button at source coordinates, move the cursor to destination index and release the button*
+:robot: ***Details** : The robot will press the mouse right-button at source coordinates, move the cursor to destination index and release the button*
 ***
 ## pressEnter
 ```java
