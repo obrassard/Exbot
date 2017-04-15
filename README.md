@@ -48,6 +48,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 | [Robot](#getting-started)()<br>_Constructs an **Exbot** object in the coordinate system of the primary screen._| - | All |
 | [mouseClickAt](#mouseclickat)(int x, int y)<br>_Perform a click at the specified coordinates_  | void | All |
 | [mouseRightClickAt](#mouserightclickat)(int x, int y)<br>_Perform a right click at the specified coordinates_  | void | All |
+| [mouseDoubleClick](#mousedoubleclick)(int x, int y)<br>_Perform a double click at the specified coordinates_  | void | All |
 | [mouseDragAndDrop](#mousedraganddrop)(int srcX, int srcY, int destX, int destY)<br>_Drag and drop form a source coordinate to a destination coordinate_ | void  | All |
 | [pressEnter](#pressenter)()<br>_Press the ENTER key_  | void | All |
 | [typeText](#typetext)(String text)<br>_Write text as direct keyboard input (A-Z letters, space, numbers or dot only)_  | void | All |
@@ -71,7 +72,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 ```java
 public void mouseClickAt(int x, int y)
 ```
-*Perform a click at the specified coordinates with the mouse.*
+*Perform a left click at the specified coordinates with the mouse.*
 ### Parameters:
 *Coordinates (x, y) where to click :*<br>
 **x** - X position<br>
@@ -84,6 +85,16 @@ public void mouseRightClickAt(int x, int y)
 *Perform a right click at the specified coordinates with the mouse.*
 ### Parameters:
 *Coordinates (x, y) where to click :*<br>
+**x** - X position<br>
+**y** - Y position
+***
+## mouseDoubleClick
+```java
+public void mouseDoubleClick(int x, int y)
+```
+*Perform a double click at the specified coordinates with the mouse.*
+### Parameters:
+*Coordinates (x, y):*<br>
 **x** - X position<br>
 **y** - Y position
 ***

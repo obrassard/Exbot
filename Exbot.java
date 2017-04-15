@@ -14,7 +14,8 @@ import javax.xml.bind.DatatypeConverter;
 public class Exbot extends Robot{
 
     /**
-     * Create a new instance of Exbot inheriting form Robot api
+     * Create a new instance of Exbot inheriting from Robot Class
+     * Constructs an Exbot object in the coordinate system of the primary screen.
      * @throws AWTException
      */
     public Exbot() throws AWTException{
@@ -25,7 +26,6 @@ public class Exbot extends Robot{
      * Verify if the OS is macOS.
      */
     private boolean isMacOs = (System.getProperty("os.name").toLowerCase()).startsWith("mac");
-
 
     /**
      * Do a "cmd + space" to show the Spotlight search box on macOS
@@ -100,9 +100,9 @@ public class Exbot extends Robot{
     }
 
     /**
-     * Move the mouse to specific coordinates of the screen and perform a click
-     * @param x X Coordinate
-     * @param y Y Coordinate
+     * Perform a click at the specified coordinates.
+     * @param x X Position
+     * @param y Y Position
      */
     public void mouseClickAt(int x, int y){
         this.mouseMove(x,y);
@@ -111,9 +111,22 @@ public class Exbot extends Robot{
     }
 
     /**
+     * Perform a right click at the specified coordinates.
+     * @param x X Position
+     * @param y Y Position
+     */
+    public void mouseDoubleClick(int x, int y){
+        this.mouseMove(x,y);
+        this.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        this.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        this.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        this.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+    }
+
+    /**
      * Move the mouse to specific coordinates of the screen and perform a right click
-     * @param x X Coordinate
-     * @param y Y Coordinate
+     * @param x X Position
+     * @param y Y Position
      */
     public void mouseRightClickAt(int x, int y){
         this.mouseMove(x,y);
