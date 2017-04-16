@@ -45,7 +45,7 @@ Exbot class include several action methods based on Java Robot. It allows you to
 
 | Method and Description  | Modifier and Type | Operating system
 | ------------- | ------------- | ---------------- |
-| [Robot](#getting-started)()<br>_Constructs an **Exbot** object in the coordinate system of the primary screen._| - | All |
+| [Exbot](#getting-started)()<br>_Constructs an **Exbot** object in the coordinate system of the primary screen._| - | All |
 | [mouseClickAt](#mouseclickat)(int x, int y)<br>_Perform a click at the specified coordinates_  | void | All |
 | [mouseRightClickAt](#mouserightclickat)(int x, int y)<br>_Perform a right click at the specified coordinates_  | void | All |
 | [mouseDoubleClick](#mousedoubleclick)(int x, int y)<br>_Perform a double click at the specified coordinates_  | void | All |
