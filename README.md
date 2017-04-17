@@ -20,14 +20,18 @@ public class Exbot extends Robot
 [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)
 
 # Getting Started
-Get start by creating a ` new ` Exbot instance with a
+
+**Download Exbot:**<br>
+You can either [download](https://github.com/obrassard/Exbot/releases) the `.jar` library or the source code from this repo.
+
+Get started by creating a ` new ` Exbot instance with a
 
 ```java
 Exbot bot = new Exbot();
 ```
 
 :book: Remember that Java Robot class must handle `AWTException`.
-For that, you need to `try/catch` exceptions or `throw` the exception:
+For that, you need to `try/catch` or `throw` the exception:
 ```java
 public static void main(String[] args) {
 
@@ -41,7 +45,7 @@ public static void main(String[] args) {
 ```
 
 # Method Summary
-Exbot class include several action methods based on Java Robot. It allows you to quickly create robot workflow that interact with the operating system of a computer.
+Exbot class include several action methods based on Java Robot. It allows you to quickly create robot workflow that interacts with the operating system of a computer.
 
 | Method and Description  | Modifier and Type | Operating system
 | ------------- | ------------- | ---------------- |
