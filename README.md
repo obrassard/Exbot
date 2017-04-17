@@ -15,15 +15,18 @@ public class Exbot extends Robot
 [Method Detail](#method-detail)<br>
 [Encryption Methods](#encryption-methods)<br>
 [About OS exclusive methods](#about-os-exclusive-methods)<br>
-[Project Ideas](#project-ideas)
+[Project Ideas](#project-ideas)<br>
 
+[Find screen coordinates](#help-coordinate)<br>
 [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)
 
 # Getting Started
 
-**Download Exbot:**<br>
-You can either [download](https://github.com/obrassard/Exbot/releases) the `.jar` library or the source code from this repo.
+### Download Exbot:<br>
+You can either [download](https://github.com/obrassard/Exbot/releases) the `.jar` library or the source code from this repo.<br>
+:bulb: Note that you'll need to `import` the library `com.obrassard.Exbot` if you chose to download the JAR file.
 
+### Create an Exbot object:<br>
 Get started by creating a ` new ` Exbot instance with a
 
 ```java
@@ -80,7 +83,9 @@ public void mouseClickAt(int x, int y)
 ### Parameters:
 *Coordinates (x, y) where to click :*<br>
 **x** - X position<br>
-**y** - Y position
+**y** - Y position<br>
+
+:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
 ***
 ## mouseRightClickAt
 ```java
@@ -90,7 +95,9 @@ public void mouseRightClickAt(int x, int y)
 ### Parameters:
 *Coordinates (x, y) where to click :*<br>
 **x** - X position<br>
-**y** - Y position
+**y** - Y position<br>
+
+:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
 ***
 ## mouseDoubleClick
 ```java
@@ -100,7 +107,9 @@ public void mouseDoubleClick(int x, int y)
 ### Parameters:
 *Coordinates (x, y):*<br>
 **x** - X position<br>
-**y** - Y position
+**y** - Y position<br>
+
+:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
 ***
 ## mouseDragAndDrop
 ```java
@@ -112,6 +121,8 @@ public void mouseDragAndDrop(int srcX, int srcY, int destX, int destY)
 **srcY** - Y source position<br>
 **destX** - X destination position<br>
 **destY** - Y destination position
+
+:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
 
 :robot: ***Details** : The robot will press the mouse right-button at source coordinates, move the cursor to destination index and release the button*
 ***
@@ -162,7 +173,7 @@ public void shortcut(int keycode)
 ### Parameters:
 **keycode** - Second key to press<br>
 
-:book: *We recommend you to* `import java.awt.event.KeyEvent`, *to enumerate the possible keycodes (e.g. KeyEvent.VK_A)*
+:bulb: *We recommend you to* `import java.awt.event.KeyEvent`, *to enumerate the possible keycodes (e.g. KeyEvent.VK_A)*
 ***
 ## <a id="macshowspotlight"></a>macShowSpotlight &nbsp; ![](https://img.shields.io/badge/Exclusive_to-macOS-blue.svg)
 ```java
@@ -208,7 +219,9 @@ public void messageSender(int x, int y, String text, int frequency, int interval
 **y** - Y Position of the text box<br>
 **text** - Text to send<br>
 **frequency** - Number of repetitions<br>
-**interval** - Delay between each sending (in ms)
+**interval** - Delay between each sending (in ms)<br>
+
+:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
 
 # Encryption Methods
 ## encode
@@ -233,6 +246,12 @@ public static String decode(String textToEncode)
 The decoded string.
 ***
 
+## :bulb: How to get specific (x,y) coordinates on a screen<a id="help-coordinate">
+
+In **macOS**, the function is built-in. You only have to do `cmd + shift + 4` and press `escape` when you're done.<br>
+In **Windows**, I found a free and lightweight application called [mousepos](http://www.adminsehow.com/wp-content/uploads/2012/03/MousePos.exe) that will do exactly that. *(source: [Admins eHow](http://www.adminsehow.com/2012/03/realtime-mouse-position-monitor-tool/)*
+
+***
 # Project Ideas
 Visit [this page](https://github.com/obrassard/Exbot/wiki) to find examples of projects and workflows created with **Exbot**
 
