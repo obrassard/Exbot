@@ -238,9 +238,11 @@ public class Exbot extends Robot{
 
         for (int i=0; i < frequency; i++){
             writeText(text);
+            this.delay(1);
             pressEnter();
             this.delay(interval);
         }
+        this.pressEnter();
     }
 
     //--- Encryption static methods ------------------
