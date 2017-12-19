@@ -1,9 +1,9 @@
 # Exbot : An extension of Java Robot API <br>
 
 
-![requirement](https://img.shields.io/badge/Require-Java%207%20or%20later-red.svg)
-![version](https://img.shields.io/badge/Version-1.0.1-brightgreen.svg)
-![Tested on macos and Windows](https://img.shields.io/badge/Tested%20on-macOS%20and%20Windows-blue.svg)
+![requirement](https://img.shields.io/badge/Require-Java%207%20or%20later-red.svg?style=for-the-badge)
+![version](https://img.shields.io/badge/Version-1.0.1-brightgreen.svg?style=for-the-badge)
+![Tested on macos and Windows](https://img.shields.io/badge/Tested%20on-macOS%20+_%20Windows-blue.svg?style=for-the-badge)
 
 
 #### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allows you to perform many robot actions, while writing less code.
