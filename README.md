@@ -6,11 +6,12 @@
 ![Tested on macos and Windows](https://img.shields.io/badge/Tested%20on-macOS%20and%20Windows-blue.svg)
 
 
-
 #### This class give extra functionality to [Java Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html).<br>It allows you to perform many robot actions, while writing less code.
 ```java
 public class Exbot extends Robot
 ```
+
+### [Read Exbot's complete documentation on GitBook](https://obrassard.gitbooks.io/exbot/)
 
 ## Table of Contents
 * [Getting Started](/Docs/getting-started.md)
