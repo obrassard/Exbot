@@ -1,7 +1,7 @@
 # Exbot : An extension of Java Robot API <br>
 
 
-### [Check this project on github](/www.github.com/obrassard/github)
+### [Check this project on github](https://github.com/obrassard/exbot)
 
 ![requirement](https://img.shields.io/badge/Require-Java%207%20or%20later-red.svg)
 ![version](https://img.shields.io/badge/Version-1.0.1-brightgreen.svg)

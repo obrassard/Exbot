@@ -1,7 +1,7 @@
 # Getting Started
 
 ### Download Exbot:<br>
-You can either [download](https://github.com/obrassard/Exbot/releases) the `.jar` library or the source code from [this repo](/www.github.com/obrassard/exbot).
+You can either [download](https://github.com/obrassard/Exbot/releases) the `.jar` library or the source code from [this repo](https://github.com/obrassard/exbot).
 
 Note that you'll need to `import` the library `com.obrassard.Exbot` if you chose to download the JAR file.
 
