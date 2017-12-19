@@ -9,12 +9,12 @@
 ```java
 public class Exbot extends Robot
 ```
+
 ## Table of Contents
-[Getting Started](/getting-started.md)
-[Method Summary](/methods-summary.md)
-[Method Detail](/methods-detail.md)
-[Encryption Methods](/encryption-methods.md)
-[About OS exclusive methods](/about-os-exclusive-methods.md)
-[Find screen coordinates](/get-screen-coordinate.md)
-[Learn more about Robot API
-](/learn-more-about-robot-api.md)
+* [Getting Started](/getting-started.md)
+* [Methods Summary](/methods-summary.md)
+* [Methods Details](/methods-detail.md)
+* [Encryption Methods](/encryption-methods.md)
+* [Get screen coordinate](/get-screen-coordinate.md)
+* [About OS exclusive methods](/methods-summary.md#about-os-exclusive-methods)
+* [Learn more about Robot API](https://docs.oracle.com/javase/7/docs/api/java/awt/Robot.html)

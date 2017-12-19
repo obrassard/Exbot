@@ -9,7 +9,7 @@ public void mouseClickAt(int x, int y)
 **x** - X position<br>
 **y** - Y position<br>
 
-:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
+[*Find out how to get the coordinates of a specific point on a screen*](/get-screen-coordinate.md)
 ***
 ## mouseRightClickAt
 ```java
@@ -21,7 +21,8 @@ public void mouseRightClickAt(int x, int y)
 **x** - X position<br>
 **y** - Y position<br>
 
-:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
+[*Find out how to get the coordinates of a specific point on a screen*](/get-screen-coordinate.md)
+
 ***
 ## mouseDoubleClick
 ```java
@@ -33,7 +34,8 @@ public void mouseDoubleClick(int x, int y)
 **x** - X position<br>
 **y** - Y position<br>
 
-:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
+[*Find out how to get the coordinates of a specific point on a screen*](/get-screen-coordinate.md)
+
 ***
 ## mouseDragAndDrop
 ```java
@@ -46,7 +48,8 @@ public void mouseDragAndDrop(int srcX, int srcY, int destX, int destY)
 **destX** - X destination position<br>
 **destY** - Y destination position
 
-:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
+[*Find out how to get the coordinates of a specific point on a screen*](/get-screen-coordinate.md)
+
 
  **Details** : The robot will press the mouse right-button at source coordinates, move the cursor to destination index and release the button*
 ***
@@ -145,5 +148,6 @@ public void messageSender(int x, int y, String text, int frequency, int interval
 **frequency** - Number of repetitions<br>
 **interval** - Delay between each sending (in ms)<br>
 
-:bulb: [*Find out how to get the coordinates of a specific point on a screen*](#help-coordinate)
+[*Find out how to get the coordinates of a specific point on a screen*](/get-screen-coordinate.md)
+
 
