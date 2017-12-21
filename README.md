@@ -11,7 +11,7 @@
 public class Exbot extends Robot
 ```
 
-### [Read Exbot's complete documentation on GitBook](https://exbot.obrassard.me)
+### [Read Exbot's complete documentation on GitBook](https://exbot.obrassard.ca)
 
 ## Table of Contents
 * [Getting Started](/Docs/getting-started.md)
